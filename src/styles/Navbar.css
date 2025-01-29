@@ -1,0 +1,145 @@
+.web-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    color: #254d4d;
+    margin-top: 2rem;
+    height: 60px;
+}
+
+.nav-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 10rem;
+    font-size: 1.3rem;
+    transition: max-height 0.3s ease, padding 0.3s ease; /* Smooth transitions */
+}
+
+.title {
+    margin-left: 10rem;
+}
+
+.nav-icons li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+.nav-icons li a{
+    color: #254d4d;
+    text-decoration: none;
+}
+
+.login-btn {
+    font-size: 1.3rem;
+    padding: 0.5rem 2rem;
+    background-color: #254d4d;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.login-btn a{
+    color: white;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    background-color: #1f3f3f;
+}
+
+.nav-icons li {
+    position: relative;
+    cursor: pointer;
+    transition: color 0.10s ease-in-out;
+}
+
+.nav-icons li:hover {
+    color: #007BFF;
+    transform: translateY(-3px);
+}
+
+.nav-icons li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007BFF;
+    transition: width 0.10s ease-in-out;
+}
+
+.nav-icons li:hover::after {
+    width: 100%;
+}
+
+/* Menu Icon (Hamburger) */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #254d4d;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .nav-icons {
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        right: 2.5rem;
+        background-color: #f0f0f0;
+        width: 70%;
+        max-height: 0;
+        overflow: hidden;
+        margin-left: 0px;
+        margin-right: 10px;
+        font-size: 1rem;
+        border-radius: 40px;
+        padding: 0; /* No padding by default */
+        z-index: 11;
+        gap: 1rem;
+    }
+
+    .nav-icons.open {
+        max-height: 300px; /* Height when opened */
+        padding: 20px 10px; /* Padding when opened */
+    }
+
+    .fas {
+        font-size: 2rem;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .title {
+        margin-left: 0;
+    }
+
+    .fa-home,
+    .fa-info-circle,
+    .fa-phone {
+        font-size: 1.4rem;
+        margin-right: 10px;
+    }
+}

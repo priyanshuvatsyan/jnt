@@ -1,0 +1,85 @@
+.standout-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.standout-container h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.features {
+  display: flex; /* Flex layout */
+  flex-wrap: wrap;
+  justify-content: center;  /* Centers the cards */
+  gap: 1rem;  /* Ensure a small gap between cards */
+}
+
+.feature-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin: 0; /* Ensure no margin between cards */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px;
+  flex: 1 1 45%; /* Allow each card to take up 45% of the container width */
+  margin-bottom: 1rem; /* Add space between rows */
+}
+
+.feature-card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #254d4d;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .standout-container h2 {
+    font-size: 1rem;
+  }
+
+  .features {
+    /* Flex properties for a better layout */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .feature-card {
+    /* Make each card take up roughly half the width (45%) */
+    max-width: 35%;
+    padding: 1rem;
+    flex: 1 1 45%; /* Flex-grow and flex-basis properties to ensure 2 cards per row */
+  }
+
+  .feature-card img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .feature-card h3 {
+    font-size: 1rem;
+  }
+
+  .feature-card p {
+    font-size: 0.8rem;
+  }
+}

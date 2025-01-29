@@ -1,0 +1,42 @@
+/* .crousal{
+  position: relative;
+  left: 10%;
+}
+ */
+ .map{
+  margin-top: 5%;
+  color: #254D4D;
+  display: flex;
+  justify-content: center;
+ }
+  .map iframe{
+    box-shadow: #14141436 0px 0px 10px 1px;
+    border-radius: 50px;
+    width: 200%;
+    max-height: 400%;
+  }
+  .map-txt{
+    margin-top: 5%;
+    margin-right: 10%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  
+@media (max-width: 768px){
+  .map{
+    flex-direction: column;
+  }
+  .map iframe{
+    margin-left: 20px;
+    width: 90%;
+    max-height: 20rem;
+  }
+  .map-txt{
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0%;
+  }
+  
+
+}

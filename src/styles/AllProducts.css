@@ -1,0 +1,183 @@
+.title{
+    display: flex;
+    align-items: center;
+justify-content: center;
+color: #254D4D;
+}
+.addProducts-container{
+ 
+    display: flex;
+    flex-direction: row;
+}
+.all-products{
+    border: 3px solid #254D4D;
+    height: 75vh;
+    width: 75vw;
+    margin-left: 10vw;
+    margin-top: 5vh;
+    overflow:scroll;
+
+}
+/* Container for all products */
+/* Container for all products */
+.all-products-list {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensure responsiveness */
+    justify-content: center; /* Center the grid items */
+}
+
+/* Individual product card styling */
+.product-card {
+   position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  
+   flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease;
+    width: 100%; /* Full width of the grid column */
+    margin-top: 2rem;
+}
+
+/* Hover effect */
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* Product card image */
+.product-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    margin-top: 1rem;
+}
+
+  
+  .product-card-name {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .product-card-category,
+  .product-card-price {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .product-card-delete-btn {
+    position: relative;
+    z-index: 2;
+    background:  #254D4D;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .product-card-delete-btn:hover {
+    background:  #254D4D;
+  }
+  
+  .all-products-empty {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  /* Add some overall padding and alignment */
+  .addProducts-container {
+    padding: 2rem;
+  }
+  
+  /* Title styling */
+  .title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+.product-card-image{
+    width: 10rem;
+}
+.product-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: #dbdada;
+    z-index: 1;
+    transition: height 0.3s ease ;
+}
+.product-card:hover::before{
+    height: 100%;
+}
+.product-card-name,
+.product-card-category,
+.product-card-price {
+  position: relative;
+  z-index: 2 ; /* Above gradient */
+}
+
+
+@media (max-width: 768px) {
+    .addProducts-container {
+        flex-direction: column;
+    }
+
+    .all-products {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90vw;
+        margin-left: -20px;
+    }
+
+    .all-products-list {
+        display: grid;
+        gap: 1rem;
+        padding: 1rem;
+        grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    }
+
+    .product-card {
+        width: 100%; /* Full width of the grid column */
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    .product-card-image {
+        height: 150px; /* Reduce the height of the image */
+    }
+}
+
+@media (max-width: 480px) {
+    .all-products-list {
+        margin-top: auto;
+        grid-template-columns: repeat(250px, 1fr); /* Single card per row for very small screens */
+    }
+
+    .product-card {
+        width: auto; /* Slightly smaller width for better spacing */
+    }
+    .product-card-delete-btn{
+        width: auto;
+    }
+    .all-products-empty{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}

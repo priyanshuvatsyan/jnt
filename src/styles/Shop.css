@@ -1,0 +1,332 @@
+body::-webkit-scrollbar{
+    display: none;
+}
+.shop-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content horizontally */
+    padding: 20px;
+}
+
+.nav {
+    width: 100%;
+    margin-bottom: 20px; /* Space below the navbar */
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%; /* Full width for responsiveness */
+}
+
+.search input {
+    padding: 15px 15px;
+    width: 40rem;
+    border-radius: 1700rem;
+    border-right: 10px solid #254D4D;
+    border-left: 10px solid #254D4D;
+    border-top: 3px solid #254D4D;
+    border-bottom: 3px solid #254D4D;
+    outline: none; /* Remove default focus outline */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.search input:focus {
+    box-shadow: 0 0 10px #254D4D; /* Highlight on focus */
+    border-color: #1b3a3a; /* Slightly darker border on focus */
+}
+
+.suggestions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive grid layout */
+    gap: 15px; /* Space between buttons */
+    margin-top: 30px;
+    width: 60%; /* Full width */
+    padding: 20px;
+    justify-items: center; /* Center align buttons */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #254D4D;
+    display: flex;
+    flex-direction: column; /* Ensures heading and grid stack properly */
+    align-items: center; /* Center-aligns heading and grid */
+    text-align: center;
+    border-radius: 20px;
+    overflow: scroll;
+    height: 12rem;
+    
+}
+.suggestions::-webkit-scrollbar{
+    display: none;
+}
+
+.suggestions button {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 55px;
+    font-size: 14px;
+    border: none;
+    border-radius: 20px; /* Rounded button */
+    background-color: #b6b6b6;
+    color: #254D4D; /* Match your theme color */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.suggestions button:hover {
+    background-color: #1b3a3a; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    color: aliceblue;
+}
+
+.suggestions button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #254D4D; /* Add focus outline */
+}
+
+.suggestions h2 {
+    margin-bottom: 10px; /* Add space below heading */
+    font-size: 1.5rem; /* Adjust heading size */
+    color: #254D4D; /* Match your theme color */
+}
+
+.suggestions .grid {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive grid layout */
+    gap: 15px; /* Space between buttons */
+    width: 70%; /* Ensure full width of container */
+    justify-items: center; /* Center-align buttons within grid */
+}
+
+/* Add spacing and styling for category sections */
+.category-section {
+    width: 100%; /* Ensure full width */
+    margin-bottom: 40px; /* Space between categories */
+}
+
+.category-title {
+    text-align: left; /* Align category titles to the left */
+    margin: 20px 0;
+    font-size: 1.8rem;
+    color: #254D4D;
+    /* Optional underline styling */
+    padding-bottom: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.our-products {
+    width: 70% !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.our-products h1 {
+    color: #1b3a3a;
+}
+/* Ensure product grid layout works within each category */
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Allowing even smaller columns on mobile */
+        gap: 15px; /* Adjust space between items */
+    }
+
+    .product-card {
+        padding: 10px;
+    }
+    .suggestions .grid {
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%; /* Adjust width of grid */
+        gap: 5px 0px;
+        overflow: hidden;
+        grid-template-columns: repeat(3, 1fr); /* 3 suggestions per row */
+    }
+    .suggestions{
+        margin-top: 0px !important;
+        width: 90%;
+        gap: 5%;
+        margin-top: 20px;
+        justify-content: start;
+        align-items: start;
+        text-align: left;
+        overflow: hidden;
+        
+    }
+    .suggestions h2{
+
+        margin-top: 0px;
+        font-size: 1rem;
+    }
+    .suggestions button{
+        margin-left: 0%;
+        padding: 8px 35px;
+        font-size: 75%;
+        margin-right: 0%;
+    }
+}
+
+/* Individual product card styles */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    justify-items: center;
+    align-items: start;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.product-card {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.product-name,
+.product-price {
+    margin: 5px 0;
+    text-align: center;
+}
+
+.product-image {
+    z-index: 9;
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+}
+
+.product-name {
+    font-size: 1.2rem;
+    color: #254D4D;
+    margin: 5px 0;
+}
+
+.product-price {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller grid columns */
+        gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-card {
+        padding: 10px;
+        width: 100px;
+        height: 100px;
+    }
+    .product-image{
+        width: 100% !important;
+        object-fit: contain;
+    }
+    .product-name{
+        font-size: 1rem;
+    }
+    .product-price{
+        font-size: 0.8rem;
+    }
+    .product-card {
+      
+    }
+    .product-container{
+       
+        margin: 0px !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .search {
+        margin-top: 20px;
+        justify-content: center; /* Ensure centering on smaller screens */
+    }
+    .search input {
+        width: 90%; /* Take most of the available space */
+    }
+    .add-to-cart{
+        font-size: 0.5rem;
+        padding: .3rem;
+    }
+    
+}
+
+/* Highlight the selected category button */
+.suggestions button.selected {
+    background-color: #254D4D; /* Change background color of selected button */
+    color: white; /* Change text color of selected button */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.footer{
+    width: 100%;
+}
+.add-to-cart{
+    font-size: .9rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+.cart-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: teal;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.cart-icon:hover {
+    background-color: darkcyan;
+}
+
+.cart-count {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

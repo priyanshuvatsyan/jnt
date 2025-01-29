@@ -1,0 +1,259 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.outer-container {
+  margin: 0;
+  padding: 0;
+  height: 90vh;
+  background: rgb(52, 168, 168);
+  background: linear-gradient(180deg, rgba(52, 168, 168, 1) 37%, rgba(255, 255, 255, 1) 72%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.login {
+  border-radius: 50px;
+  background: white;
+  height: 80%;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-form form input {
+  padding: 1rem 2rem;
+  width: 20rem;
+  margin: 1.2rem;
+}
+
+form button {
+  margin-top: 1rem;
+}
+
+.google-button {
+  margin-top: 1rem;
+  width: 70%;
+}
+
+.auth-form h2 {
+  color: #254d4d;
+  font-size: 2.5rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15rem;
+  margin-right: 10rem;
+}
+
+.text button {
+  width: 70%;
+}
+
+.login-img {
+  position: absolute;
+  display: none;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 1024px) {
+  .outer-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .login {
+    height: 75vh;
+    width: 85%;
+  }
+
+  .text {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+
+  .auth-form form input {
+    width: 18rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .outer-container {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .login {
+    height: 70vh;
+    width: 90%;
+    align-items: start;
+  }
+
+  .auth-form form {
+    height: 50vh;
+    z-index: 9;
+  }
+
+  .auth-form form input {
+    padding: 0.8rem 1.5rem;
+    width: 16rem;
+    margin: 1rem;
+  }
+
+  form button, .google-button {
+    width: 70%;
+  }
+
+  .auth-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .text {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  .text button {
+    width: 90%;
+  }
+
+  .text p {
+    display: none;
+  }
+
+  .text h1 {
+    font-size: 1.5rem;
+  }
+
+  form p {
+    font-size: 0.7rem;
+  }
+
+  .login-img {
+    position: absolute;
+    display: block;
+    width: 92%;
+    top: 25%;
+    z-index: 1;
+    opacity: 0.2;
+  }
+}
+
+@media (max-width: 576px) {
+  .login {
+    height: 65vh;
+    width: 95%;
+  }
+
+  .auth-form form input {
+    width: 14rem;
+  }
+
+  .auth-form h2 {
+    font-size: 1.2rem;
+  }
+
+  .text {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .text h1 {
+    font-size: 1.2rem;
+  }
+
+  form p {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-form form input {
+    width: 12rem;
+  }
+
+  .auth-form h2 {
+    font-size: 1rem;
+  }
+
+  .text h1 {
+    font-size: 1rem;
+  }
+
+  .text button {
+    width: 80%;
+  }
+}
+@media (min-width: 1026px) and (max-width: 1230px) {
+  .outer-container {
+    flex-direction: column;
+    height: auto;
+    gap: 1.5rem; /* Reduced gap for better alignment */
+  }
+
+  .login {
+    height: 75vh;
+    width: 50%; /* Adjusted width for better alignment */
+    align-items: center;
+  }
+
+  .text {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    text-align: center; /* Ensures text alignment remains centered */
+  }
+
+  .auth-form form {
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* Added consistent spacing between form elements */
+  }
+
+  .auth-form form input {
+    padding: 0.9rem 1.8rem; /* Adjusted padding for better proportions */
+    width: 18rem; /* Adjusted width for a more balanced look */
+  }
+
+  .auth-form h2 {
+    font-size: 2rem; /* Adjusted font size for better readability */
+  }
+
+  form button, .google-button {
+    width: 80%; /* Increased button width for better alignment */
+  }
+
+  .text h1 {
+    font-size: 1.8rem; /* Adjusted text size for better scaling */
+  }
+
+  .text button {
+    width: 80%; /* Ensured button width aligns with text block */
+  }
+}
+

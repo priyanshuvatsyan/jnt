@@ -1,0 +1,118 @@
+/* General Styles */
+.all-products-empty {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Add some overall padding and alignment */
+.Products-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center; /* Center content horizontally */
+  justify-content: center;
+}
+
+/* Title styling */
+.title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem; /* Reduced gap between product cards */
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Product Wrapper */
+.product-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Product Card */
+.product-card {
+  padding: 10% 10%; /* Reduce padding for smaller cards */
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: none;
+  transition: transform 0.3s ease;
+  width: 180px; /* Increased width */
+  height: 220px; /* Increased height */
+}
+.OP-title{
+  color: #254D4D;
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .product-card img {
+    width: 70%;
+    height: 70%;
+      }
+  .product-card {
+    padding: 5%; /* Reduced padding for smaller screens */
+    width: 140px; /* Reduced width for smaller screens */
+    height: 180px; /* Reduced height for smaller screens */
+  }
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.product-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the image fits inside the card */
+  object-position: center; /* Centers the image */
+}
+
+/* Product Name */
+.product-name {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Browse More Button */
+.browse-more-button {
+  display: block;
+  margin: 2rem auto;
+ width: 10rem;
+ padding: 15px 20px;
+  font-size: .9rem;
+  color: #fff;
+  background-color: #254D4D ;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.browse-more-button:hover {
+  background-color: #555;
+}
