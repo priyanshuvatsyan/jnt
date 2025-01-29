@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import './styles/Home.css';
-import Crousal from './componants/crousal';
+import Crousal from './componants/Crousal';
 import Navbar from './Navbar';
 import StandOut from './componants/StandOut';
 import Products from './componants/Products';
