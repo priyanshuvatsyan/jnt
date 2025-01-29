@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './styles/Products.css';
+import { Link } from 'react-router-dom';
 
 const products = [
   { name: 'Oil', image: '/oil-removebg-preview.png' },
@@ -57,9 +58,10 @@ export default function Products() {
           >
             <div className="product-card">
               <motion.img 
+              
                 src={product.image} 
                 alt={product.name} 
-                className="product-card-image"
+                className="product-card-image home-prod-img"
                 whileHover={{ scale: 1.05 }} // Slight zoom on hover
               />
             </div>
@@ -72,7 +74,8 @@ export default function Products() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
-        Browse More
+        
+        <Link to={'/shop'} className='browse-more' >Browse More</Link>
       </motion.button>
     </motion.div>
   );

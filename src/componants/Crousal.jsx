@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import './styles/Crousal.css';
+import { Link } from 'react-router-dom';
 
 export default function Crousal() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -48,7 +49,7 @@ export default function Crousal() {
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.2 }}
         >
-          Shop
+           <Link to={'/shop'}  >Shop</Link>
         </motion.button>
       </div>
     </div>

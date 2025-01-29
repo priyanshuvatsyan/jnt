@@ -11,7 +11,7 @@
     margin-bottom: 20px;
 }
 
-.container {
+.noti-inside-container {
     display: flex;
     flex-direction: row;
    

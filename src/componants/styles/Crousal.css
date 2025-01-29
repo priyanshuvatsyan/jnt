@@ -76,6 +76,10 @@ button:hover {
  box-shadow: 1px 1px 10px 10px #2b6d543b;
  border-radius:20px;
 }
+.hero-content a{
+  color: #fff;
+  text-decoration: none;
+}
 @media (max-width: 768px){
   .carousel-container {
    

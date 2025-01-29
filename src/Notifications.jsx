@@ -35,8 +35,8 @@ export default function Notifications() {
     return (
         <div className="notifications-container">
             <h1>Notifications</h1>
-            <div className="container">
-                <div className="nav">
+            <div className="noti-inside-container">
+                <div className="noti-nav">
                     <AdminNav />
                 </div>
                 <div className="notifications">

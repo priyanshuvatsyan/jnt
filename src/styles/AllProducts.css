@@ -30,6 +30,8 @@ color: #254D4D;
 
 /* Individual product card styling */
 .product-card {
+    
+
    position: relative;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -47,20 +49,23 @@ color: #254D4D;
     transform: scale(1.05);
 }
 
+
 /* Product card image */
 .product-card-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+    width: 50% !important;
+    height: 90px;
+    object-fit: contain;
     position: relative;
     z-index: 2;
     margin-top: 1rem;
+    margin-bottom: -10%;
+    
 }
 
   
   .product-card-name {
     font-size: 1.2rem;
-    margin: 0.5rem 0;
+    margin-bottom: -5%;
   }
   
   .product-card-category,
@@ -76,11 +81,12 @@ color: #254D4D;
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;
-    margin: 1rem 0;
+   margin-top: -10px;
     cursor: pointer;
     border-radius: 4px;
     font-size: 1rem;
     transition: background 0.3s ease;
+    
   }
   
   .product-card-delete-btn:hover {
@@ -130,7 +136,9 @@ color: #254D4D;
   position: relative;
   z-index: 2 ; /* Above gradient */
 }
-
+.product-card-category{
+    margin-bottom: -10px;
+}
 
 @media (max-width: 768px) {
     .addProducts-container {
@@ -154,11 +162,12 @@ color: #254D4D;
 
     .product-card {
         width: 100%; /* Full width of the grid column */
-        height: auto; /* Adjust height for smaller screens */
+        height: 80% !important; /* Adjust height for smaller screens */
     }
 
     .product-card-image {
-        height: 150px; /* Reduce the height of the image */
+        height: 100% !important;
+        width: 100% !important; /* Reduce the height of the image */
     }
 }
 

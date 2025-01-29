@@ -41,6 +41,11 @@
   }
 }
 
+.home-prod-img{
+  width: 90% !important;
+  object-fit: cover;
+}
+
 /* Product Wrapper */
 .product-wrapper {
   display: flex;
@@ -64,6 +69,10 @@
 .OP-title{
   color: #254D4D;
   font-size: 2rem;
+}
+.browse-more{
+  color: #fff;
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {

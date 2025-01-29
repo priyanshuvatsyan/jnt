@@ -5,8 +5,9 @@ body{
     display: flex;
    
 }
-.container{
-
+.addProd-main-container{
+  display: flex;
+flex-direction: column;
 }
 .form-container{
   display: flex;
@@ -100,34 +101,42 @@ button{
 @media (max-width: 480px){
   .product-form {
     flex-direction: column;
+   
     
+  }
+  .container{
+
   }
   .form-container{
     margin: 0;
     margin-right: 0;
+    
   }
   .addProductContainer{
     width: 20rem;
     margin-right: 0;
     flex-direction: column;
     margin-top: 20%;
-    border: 2px solid #254d4d;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 10%;
+   
   }
   .product-form-left{
     margin-right: 0;
     height: 20rem;
     width: 15rem;
-    border: 2px solid #254d4d;
+   
   }
   .product-form-right{
     margin-left: 0;
     height: 10rem;
     width:10rem;
-    border: 2px solid #254d4d;
+    margin-top: 10%;
+    
   }
-  .nav{
-    width: 20rem !important;
-  }
+  
   .container{
     border: 2px solid #254d4d;
     max-width: 20rem;

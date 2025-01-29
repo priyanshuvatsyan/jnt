@@ -82,10 +82,10 @@ export default function AddProduct() {
 
   return (
   
-    <div className="container">
+    <div className="addProd-main-container">
       <div className="title">JN Traders</div>
       <div className="addProductContainer">
-        <div className="nav">
+        <div className="addProduct-nav">
           <AdminNav />
         </div>
         <div className="form-container">
