@@ -55,8 +55,8 @@ export default function AddProduct() {
       const imageUrl = response.data.secure_url;
 
       const productData = {
-        name,
-        category,
+        name: name.trim(),
+        category:category.trim().toLowerCase(),
         price: parseFloat(price),
         imageUrl,
       };
