@@ -13,7 +13,7 @@ export default function Faqs() {
     },
     {
       question: 'Is there a minimum order requirement?',
-      answer: 'Yes, the minimum order value is [Insert Value]. This ensures efficient processing and delivery.',
+      answer: 'Yes, the minimum order value is 3000. This ensures efficient processing and delivery.',
     },
     {
       question: 'Can I get credit for bulk orders?',
