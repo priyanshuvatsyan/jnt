@@ -55,7 +55,7 @@ body::-webkit-scrollbar{
     align-items: center; /* Center-aligns heading and grid */
     text-align: center;
     border-radius: 20px;
-    overflow: scroll;
+    overflow: auto;
     height: 12rem;
     
 }
@@ -149,7 +149,7 @@ body::-webkit-scrollbar{
         margin-right: 0px;
         width: 100%; /* Adjust width of grid */
         gap: 5px 0px;
-        overflow: hidden;
+        overflow: auto;
         grid-template-columns: repeat(3, 1fr); /* 3 suggestions per row */
     }
     .suggestions{
@@ -163,6 +163,9 @@ body::-webkit-scrollbar{
         overflow: hidden;
         
     }
+    .suggestions .grid::-webkit-scrollbar{
+    display: none;
+}
     .suggestions h2{
 
         margin-top: 0px;
@@ -180,7 +183,7 @@ body::-webkit-scrollbar{
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 30px;
     width: 100%;
     justify-items: center;
     align-items: start;
@@ -243,7 +246,8 @@ body::-webkit-scrollbar{
         height: 100px;
     }
     .product-image{
-        width: 100% !important;
+        width: 8rem !important;
+        max-width: 9rem !important;
         object-fit: contain;
     }
     .product-name{
