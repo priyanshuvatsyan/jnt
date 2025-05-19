@@ -1,0 +1,55 @@
+.notification-banner {
+  position: fixed;
+  z-index: 9999;
+  background-color: #fff4e6;
+  color: #254D4D;
+  border: 1px solid #254D4D;
+  border-radius: 8px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  animation: fadeSlideIn 0.5s ease-out;
+}
+
+/* Desktop: right bottom corner */
+@media (min-width: 768px) {
+  .notification-banner {
+    bottom: 20px;
+    right: 20px;
+    flex-direction: row;
+  }
+}
+
+/* Mobile: top center */
+@media (max-width: 767px) {
+  .notification-banner {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.notification-banner button {
+  background-color: #254D4D;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

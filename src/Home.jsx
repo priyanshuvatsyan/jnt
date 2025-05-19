@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import StandOut from './componants/StandOut';
 import Products from './componants/Products';
 import Faqs from './componants/Faqs';
+import NotificationBanner from './componants/NotificationBanner';
 import Footer from './componants/Footer';
 
 export default function Home() {
@@ -13,6 +14,12 @@ export default function Home() {
   const crousalRef = useRef(null);
   const standOutRef = useRef(null);
   const productsRef = useRef(null);
+  const createAccountRef = useRef(null);
+
+const scrollToCreateAccount = () => {
+  createAccountRef.current?.scrollIntoView({ behavior: 'smooth' });
+};
+
 
   // In-view hooks
   const isCrousalInView = useInView(crousalRef, { once: true });
@@ -36,6 +43,11 @@ export default function Home() {
         initial="hidden"
         animate={isCrousalInView ? 'visible' : 'hidden'}
       >
+
+<div className="development-phase">
+  <span>🚧 We are currently in development phase. If you have any suggestions, please let us know! 🚧</span>
+</div>
+
         <Crousal />
       </motion.div>
 
@@ -84,7 +96,10 @@ export default function Home() {
         <div className="footer">
           <Footer />
         </div>
+
+
       </motion.div>
+      <NotificationBanner />
     </div>
   );
 }
